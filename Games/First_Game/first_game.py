@@ -9,7 +9,7 @@ pygame.init() # pylint: disable=no-member
 screen = pygame.display.set_mode((1000, 500))
 clock = pygame.time.Clock()
 background = pygame.image.load(os.path.join('Images', 'background.jpg')).convert()
-player = pygame.image.load(os.path.join('Images', 'player.jpg')).convert()
+player = pygame.image.load(os.path.join('Images', 'player_v2.png')).convert_alpha()
 RUNNING = True
 dt = 0 # pylint: disable=invalid-name
 
