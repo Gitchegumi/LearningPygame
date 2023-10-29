@@ -23,6 +23,9 @@ while not GAME_OVER:
     for event in pygame.event.get():
         if event.type == pygame.QUIT: # pylint: disable=no-member
             GAME_OVER = True
+        elif event.type == pygame.MOUSEMOTION: # pylint: disable=no-member
+            x = event.pos[0] - sprite1_width / 2
+            y = event.pos[1] - sprite1_height / 2
 
     pressed = pygame.key.get_pressed()
     if pressed[pygame.K_UP]: # pylint: disable=no-member
@@ -40,7 +43,7 @@ while not GAME_OVER:
     y = max(y, 0)
     x = min(x, screen.get_width() - sprite1_width)
     y = min(y, screen.get_height() - sprite1_height)
-    
+
     screen.fill((0, 0, 0))
 
     screen.blit(sprite1, (x, y))
