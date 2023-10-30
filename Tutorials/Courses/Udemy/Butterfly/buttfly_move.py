@@ -40,7 +40,7 @@ while not GAME_OVER:
     y = max(y, 0)
     x = min(x, screen.get_width() - sprite1_width)
     y = min(y, screen.get_height() - sprite1_height)
-    
+
     screen.fill((0, 0, 0))
 
     screen.blit(sprite1, (x, y))
