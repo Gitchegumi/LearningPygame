@@ -41,7 +41,7 @@ while RUNNING:
     pygame.draw.rect(screen, button_color, button_rect)
     screen.blit(button_text, (button_rect[0] + button_width / 2 - button_text.get_width() / 2, \
                                 button_rect[1] + button_height / 2 - button_text.get_height() / 2))
-    
+
     pygame.display.update()
 
 pygame.quit() # pylint: disable=no-member
